@@ -1,0 +1,31 @@
+.fade-mail-enter-active{
+	transition: all .6s
+}
+.fade-mail-leave-active {
+	transition: all .3s
+}
+.fade-mail-enter{
+    position: fixed;
+    transform: translateX(-600px)  translateY(300px) scale(0);
+	opacity: 0;
+}
+.fade-mail-leave-to {
+    position: fixed;
+	transform: translateX(-600px) translateY(300px) scale(0);
+	opacity: 0;
+}
+
+.fade-enter-active{
+	transition: all .6s
+}
+.fade-leave-active {
+	transition: all .3s
+}
+.fade-enter{
+    position: fixed;
+	opacity: 0;
+}
+.fade-leave-to {
+    position: fixed;
+	opacity: 0;
+}

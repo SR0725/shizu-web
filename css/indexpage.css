@@ -1,0 +1,146 @@
+
+
+#indexpage header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 64px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+#indexpage header::before{
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 2vh;
+    width: 96vw;
+    border-bottom: 1px solid #000;
+}
+
+#indexpage header img{
+    margin-left: 16px;
+    margin-right: 8px;
+}
+
+#indexpage #background{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+
+
+@keyframes mail-animation {
+    0%   {transform: rotateZ(-5deg)}
+    50%   {transform: rotateZ(45deg)}
+    100%   {transform: rotateZ(-5deg)}
+}
+
+#indexpage .mail-animation{
+    position: absolute;
+    top: -2vw;
+    right: -2vh;
+    color: red;
+    font-size: 4em;
+    animation-name: mail-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#indexpage #mail{
+    position: fixed;
+    bottom: 0px;
+    left: 10vw;
+    height: 40vh;
+    cursor: pointer;
+}
+
+#indexpage #street-sign{
+    position: fixed;
+    bottom: 0px;
+    right: 10vw;
+    height: 80vh;
+}
+
+#indexpage #street-sign .i1{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height:100%
+}
+
+#indexpage #street-sign .i2{
+    position: absolute;
+    right: 26vh;
+    bottom: 64.6vh;
+    height: 10vh;
+    cursor: pointer;
+}
+
+#indexpage #street-sign .i3{
+    position: absolute;
+    right: 12vh;
+    bottom: 57.6vh;
+    height: 6vh;
+    cursor: pointer;
+}
+
+#indexpage #street-sign .i4{
+    position: absolute;
+    right: 25vh;
+    bottom: 55.1vh;
+    height: 5vh;
+    cursor: pointer;
+}
+
+#indexpage #street-sign .i5{
+    position: absolute;
+    right: 28vh;
+    bottom: 47.9vh;
+    height: 6vh;
+    cursor: pointer;
+}
+
+#indexpage #street-sign .i6{
+    position: absolute;
+    right: 12vh;
+    bottom: 46.9vh;
+    height: 6vh;
+    cursor: pointer;
+}
+
+
+#indexpage #street-sign .sign-btn:hover{
+    transition: all 0.5s;
+    transform: matrix3d(
+        1,0,0,0,
+        0,1,0,0,
+        0,0,1,0,
+        0,0,0,0.85
+    );
+}
+
+#indexpage #person-data{
+    position: fixed;
+    left:calc(50vw - 70.75vh);
+    bottom: 0;
+    height: 100vh;
+}
+
+#indexpage #person-data .backarrow{
+    height:10%;
+    position: absolute;
+    top: 12vh;
+    left: 16vh;
+    cursor: pointer;
+
+}
+
+
+#indexpage #person-data .backarrow:hover{
+    transition: all 0.5s;
+    transform: rotateZ(15deg);
+
+}

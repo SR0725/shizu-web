@@ -1,0 +1,127 @@
+
+
+.project-show header{
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    height: 64px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.project-show header::before{
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 2vh;
+    width: 96vw;
+    border-bottom: 1px solid #000;
+}
+
+.project-show header img{
+    margin-left: 16px;
+    margin-right: 8px;
+}
+
+.project-show main{
+    margin-top: 124px;
+}
+
+.project-show main::before{
+    content: "";
+    height: 90vh;
+    position: absolute;
+    right: 50vw;
+    top: 124px;
+    border-left: 1px solid #000
+}
+
+
+.project-show main .project-list{
+    position: absolute;
+    width: 45vw;
+    left: 2.5vw;
+}
+
+.project-show main .project-list img{
+    margin-top: 32px;
+    height: 12rem;
+    width: 12rem;
+    border: 0px;
+    object-fit:cover
+}
+
+
+.project-show main .project-show{
+    position: absolute;
+    width: 40vw;
+    right: 5vw;
+}
+
+.project-show main .project-show h1{
+    margin-top: 16px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.project-show main .project-show img{
+    height: 100%;
+    max-height: 30vw;
+    width: 40vw;
+    border: 0px;
+    object-fit:cover;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.project-show main .project-show img:not(.nohover):hover{
+    max-height: 100vh;
+    transition: all 0.5s;
+}
+
+
+#projectworkpage main .project-nav .n{
+    position: absolute;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid yellow;
+    color: yellow;
+    cursor: pointer;
+}
+
+#projectworkpage main .project-nav .n1{
+    left: 23vw;
+    top: 15vw;
+}
+
+#projectworkpage main .project-nav .n2{
+    left: 6vw;
+    top: 9vw;
+}
+
+#projectworkpage main .project-nav .n3{
+    left: 17vw;
+    top: 18vw;
+}
+
+#projectworkpage main .project-nav .n4{
+    left: 12vw;
+    top: 16vw;
+}
+
+.project-show main .project-nav .n5{
+    left: 28vw;
+    top: 8vw;
+}
+
+.project-show main .project-nav .n6{
+    left: 21vw;
+    top: 10vw;
+}

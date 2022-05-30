@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>靜月</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	<link href="css/index.css" rel="stylesheet">
+	<link href="css/indexpage.css" rel="stylesheet">
+	<link href="css/startpage.css" rel="stylesheet">
+	<link href="css/projectworkpage.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+	<script src="https://kit.fontawesome.com/892ef78008.js" crossorigin="anonymous"></script>
+	<script src="scripts/vue.js"></script>
+</head>
+<body>
+	<div id="startpage">
+		<transition name="fade">
+			<div v-if="show">
+				<div id="background" class="carousel slide carousel-fade" data-bs-ride="carousel">
+					<div class="carousel-item active" data-bs-interval="1500">
+						<img src="img/startpage/0-4-1.jpg"></img>
+					</div>
+					<div class="carousel-item" data-bs-interval="1500">
+						<img src="img/startpage/0-4-2.jpg"></img>
+					</div>
+					<div class="carousel-item" data-bs-interval="1500">
+						<img src="img/startpage/0-4-3.jpg"></img>
+					</div>
+					<div class="carousel-item" data-bs-interval="1500">
+						<img src="img/startpage/0-4-4.jpg"></img>
+					</div>
+					<div class="carousel-item" data-bs-interval="1000000000">
+						<img src="img/startpage/0-4-5.jpg"></img>
+					</div>
+				</div>
+
+				<div id="shizu" @click="changePage">
+					<img src="img/startpage/0-1-1.gif" class="first"></img>
+					<img src="img/startpage/0-1-2.gif" class="last"></img>
+				</div>
+
+				<div id="title">
+					<div id="journey">
+						<img src="img/startpage/0-3-1.svg" style="height:100%"></img>
+					</div>
+					<div id="yourname">
+						<img src="img/startpage/0-3-2.svg" style="height:100%"></img>
+					</div>
+				</div>
+
+				<div id="change-animation" v-if="change">
+				<div>
+					Follow with me and I'll take you on my artistic journey
+				</div>
+				<div>
+					跟著我,我會帶你前往我的設計旅程
+				</div>
+			</div>
+			</div>
+		</transition>
+	</div>
+
+	<div id="indexpage">
+		<transition name="fade">
+			<div v-if="show">
+				<header>
+					<img src="img/indexpage/0-3-1.svg" style="height:80%"></img>
+					<img src="img/indexpage/0-3-2.svg" style="height:40%"></img>
+				</header>
+				<main>
+					<div id="background">
+						<img src="img/indexpage/很長的波長.svg" style="height:100%"></img>
+					</div>
+
+					<div id="mail" @click="personPage=true">
+						<img src="img/indexpage/1-1.png" style="height:100%"></img>
+						<div class="mail-animation">
+							!
+						</div>
+					</div>
+
+					<div id="street-sign">
+						<img src="img/indexpage/路牌無字.png" class="i1"></img>
+						<img @click="openOtherPage('projectwork')" src="img/indexpage/1-2路牌按鈕.svg" class="i2 sign-btn"></img>
+						<img @click="openOtherPage('draw')" src="img/indexpage/1-3路牌按鈕.svg" class="i3 sign-btn"></img>
+						<img @click="openOtherPage('interiordesign')" src="img/indexpage/1-4路牌按鈕.svg" class="i4 sign-btn"></img>
+						<img @click="openOtherPage('animationwork')" src="img/indexpage/1-5路牌按鈕.svg" class="i5 sign-btn"></img>
+						<img @click="openOtherPage('myprojects')" src="img/indexpage/1-6路牌按鈕.svg" class="i6 sign-btn"></img>
+					</div>
+
+					<transition name="fade-mail">
+						<div id="person-data" v-if="personPage">
+							<img src="img/indexpage/1-7.svg" style="height:100%"></img>
+							<img @click="personPage=false" class="backarrow" src="img/indexpage/backarrow.png"></img>
+						</div>
+					<transition>
+				</main>
+			</div>
+		</transition>
+	</div>
+
+	<div id="projectworkpage" class="project-show">
+		<transition name="fade">
+			<div v-if="show">
+				<header @click="closePage">
+					<img src="img/indexpage/0-3-1.svg" style="height:80%"></img>
+					<img src="img/indexpage/0-3-2.svg" style="height:40%"></img>
+
+				</header>
+				<main>
+				<div class="project-list">
+					<div class="row align-items-start">
+						<div class="col" @click="openProjectlist(0)">
+							<img src="img/projectwork/01.jpg" alt="...">
+						</div>
+						<div class="col" @click="openProjectlist(1)">
+							<img src="img/projectwork/02.jpg" alt="...">
+						</div>
+						<div class="col" @click="openProjectlist(2)">
+							<img src="img/projectwork/03.jpg" alt="...">
+						</div>
+					</div>
+					<div class="row align-items-start">
+						<div class="col" @click="openProjectlist(3)">
+							<img src="img/projectwork/04.jpg" alt="...">
+						</div>
+						<div class="col" @click="openProjectlist(4)">
+							<img src="img/projectwork/05.jpg" alt="...">
+						</div>
+						<div class="col" @click="openProjectlist(5)">
+							<img src="img/projectwork/06.jpg" alt="...">
+						</div>
+					</div>
+					</div>
+					<div class="project-show">
+						<img v-bind:class="{'nohover' : mainProjectShow}" v-bind:src="projectImgShow" alt="...">
+						<div v-if="mainProjectShow">
+							<div class="project-nav">
+								<div class="n n1" @click="openMainProjectlist(1)">1</div>
+								<div class="n n2" @click="openMainProjectlist(2)">2</div>
+								<div class="n n3" @click="openMainProjectlist(3)">3</div>
+								<div class="n n4" @click="openMainProjectlist(4)">4</div>
+								<div class="n n5" @click="openMainProjectlist(5)">5</div>
+								<div class="n n6" @click="openMainProjectlist(6)">6</div>
+							</div>
+							<h1>{{mainProject.title}}</h1>
+							<div v-html="mainProject.text"></div>
+		                </div>
+
+					</div>
+				</main>
+			</div>
+		</transition>
+	</div>
+
+	<div id="projectdrawpage" class="project-show">
+		<transition name="fade">
+			<div v-if="show">
+				<header @click="closePage">
+					<img src="img/indexpage/0-3-1.svg" style="height:80%"></img>
+					<img src="img/indexpage/0-3-2.svg" style="height:40%"></img>
+				</header>
+				<main>
+					<div class="project-list">
+						<div class="row align-items-start">
+							<div class="col" style="cursor: pointer" @click="openProjectlist(index)" v-for="(navproject, index) in projectlist">
+								<img v-bind:src="navproject.img" alt="...">
+							</div>
+						</div>
+					</div>
+					<div class="project-show">
+						<img v-bind:src="project.img" alt="...">
+						<h1>{{project.title}}</h1>
+						<div v-html="project.text"></div>
+					</div>
+				</main>
+			</div>
+		</transition>
+	</div>
+
+	<div id="interiordesignpage" class="project-show">
+		<transition name="fade">
+			<div v-if="show">
+				<header @click="closePage">
+					<img src="img/indexpage/0-3-1.svg" style="height:80%"></img>
+					<img src="img/indexpage/0-3-2.svg" style="height:40%"></img>
+				</header>
+				<main>
+					<div class="project-list">
+						<div class="row align-items-start">
+							<div class="col" style="cursor: pointer" @click="openProjectlist(index)" v-for="(navproject, index) in projectlist">
+								<img v-bind:src="navproject.img" alt="...">
+							</div>
+						</div>
+					</div>
+					<div class="project-show">
+						<img v-bind:src="project.img" alt="...">
+						<h1>{{project.title}}</h1>
+						<div v-html="project.text"></div>
+					</div>
+				</main>
+			</div>
+		</transition>
+	</div>
+
+	<div id="animationworkpage" class="project-show">
+		<transition name="fade">
+			<div v-if="show">
+				<header @click="closePage">
+					<img src="img/indexpage/0-3-1.svg" style="height:80%"></img>
+					<img src="img/indexpage/0-3-2.svg" style="height:40%"></img>
+				</header>
+				<main>
+					<div class="project-list">
+						<div class="row align-items-start">
+							<div class="col" style="cursor: pointer" @click="openProjectlist(index)" v-for="(navproject, index) in projectlist">
+								<img v-bind:src="navproject.img" alt="...">
+							</div>
+						</div>
+					</div>
+					<div class="project-show">
+						<img v-bind:src="project.anim" alt="...">
+						<h1>{{project.title}}</h1>
+						<div v-html="project.text"></div>
+					</div>
+				</main>
+			</div>
+		</transition>
+	</div>
+
+	<div id="myprojectspage" class="project-show">
+		<transition name="fade">
+			<div v-if="show">
+				<header @click="closePage">
+					<img src="img/indexpage/0-3-1.svg" style="height:80%"></img>
+					<img src="img/indexpage/0-3-2.svg" style="height:40%"></img>
+				</header>
+				<main>
+					<div class="project-list">
+						<div class="row align-items-start">
+							<div class="col" style="cursor: pointer" @click="openProjectlist(index)" v-for="(navproject, index) in projectlist">
+								<img v-bind:src="navproject.imgList[0]" alt="...">
+							</div>
+						</div>
+					</div>
+					<div class="project-show">
+						<img class="imglist" v-for="(theimg, index) in project.imgList" v-bind:src="theimg" >
+						<h1>{{project.title}}</h1>
+						<div v-html="project.text"></div>
+					</div>
+				</main>
+			</div>
+		</transition>
+	</div>
+
+
+	<script src="scripts/startpage.js"></script>
+
+</body>
+</html>

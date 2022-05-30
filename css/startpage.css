@@ -1,0 +1,94 @@
+
+#startpage #background{
+    position: fixed;
+    left: 0;
+    top: 20vh;
+    height: 50vh;
+    width: 100%;
+    background: #f1f0f5;
+}
+
+#startpage .carousel-item{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+
+#startpage #shizu{
+    z-index: 2;
+    position: fixed;
+    left: 10vw;
+    bottom: 0;
+    height: 90vh;
+    width: 40.7vh;
+}
+
+#startpage #shizu img{
+    position: absolute;
+    height:100%;
+
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+#startpage #shizu .first{
+    opacity: 1;
+}
+
+#startpage #shizu:hover .first{
+    opacity: 0;
+}
+#startpage #shizu .last{
+    opacity: 0;
+}
+
+#startpage #shizu:hover .last{
+    opacity:1;
+}
+
+
+#startpage #title{
+    position: fixed;
+    right: 8vw;
+    bottom: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+#startpage #journey{
+    height: 16vh;
+}
+
+
+#startpage #yourname{
+    margin-top: 15px;
+    height: 4vh;
+}
+
+@keyframes startpage-animation {
+    0%   {width: 0vw; height: 0vh;left: 20vw;bottom: 20vh}
+    100%   {width: 100vw; height: 100vh;left: 0vw;bottom: 0vh}
+}
+#startpage #change-animation{
+    z-index: 1;
+    position: fixed;
+    background: #9c95cb;
+    left: 20vw;
+    bottom: 20vh;
+    width: 0vw;
+    height: 0vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+
+    animation-name: startpage-animation;
+    animation-duration: 1s;
+    animation-fill-mode : forwards;
+    color: #fff
+}
