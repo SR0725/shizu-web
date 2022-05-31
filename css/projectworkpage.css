@@ -1,7 +1,7 @@
 
 
 .project-show header{
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     top: 0px;
     left: 0px;
@@ -47,6 +47,7 @@
 }
 
 .project-show main .project-list img{
+    cursor: pointer;
     margin-top: 32px;
     height: 12rem;
     width: 12rem;
@@ -78,7 +79,7 @@
 }
 
 .project-show main .project-show img:not(.nohover):hover{
-    max-height: 100vh;
+    max-height: 200vh;
     transition: all 0.5s;
 }
 
@@ -124,4 +125,14 @@
 .project-show main .project-nav .n6{
     left: 21vw;
     top: 10vw;
+}
+
+.project-show .backarrow{
+
+}
+
+.project-show .backarrow:hover{
+    transition: all 0.5s;
+    transform: rotateZ(15deg);
+
 }

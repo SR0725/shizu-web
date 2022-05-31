@@ -61,7 +61,7 @@
     position: fixed;
     bottom: 0px;
     right: 10vw;
-    height: 80vh;
+    height: 90vh;
 }
 
 #indexpage #street-sign .i1{
@@ -73,40 +73,40 @@
 
 #indexpage #street-sign .i2{
     position: absolute;
-    right: 26vh;
-    bottom: 64.6vh;
+    right: 31vh;
+    bottom: 74.6vh;
     height: 10vh;
     cursor: pointer;
 }
 
 #indexpage #street-sign .i3{
     position: absolute;
-    right: 12vh;
-    bottom: 57.6vh;
+    right: 17vh;
+    bottom: 64.6vh;
     height: 6vh;
     cursor: pointer;
 }
 
 #indexpage #street-sign .i4{
     position: absolute;
-    right: 25vh;
-    bottom: 55.1vh;
+    right: 30vh;
+    bottom: 62.1vh;
     height: 5vh;
     cursor: pointer;
 }
 
 #indexpage #street-sign .i5{
     position: absolute;
-    right: 28vh;
-    bottom: 47.9vh;
+    right: 33vh;
+    bottom: 54.9vh;
     height: 6vh;
     cursor: pointer;
 }
 
 #indexpage #street-sign .i6{
     position: absolute;
-    right: 12vh;
-    bottom: 46.9vh;
+    right: 17vh;
+    bottom: 54vh;
     height: 6vh;
     cursor: pointer;
 }

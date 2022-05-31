@@ -38,7 +38,7 @@
 					</div>
 				</div>
 
-				<div id="shizu" @click="changePage">
+				<div id="shizu" @click="changePage" style="cursor: pointer">
 					<img src="img/startpage/0-1-1.gif" class="first"></img>
 					<img src="img/startpage/0-1-2.gif" class="last"></img>
 				</div>
@@ -53,13 +53,16 @@
 				</div>
 
 				<div id="change-animation" v-if="change">
-				<div>
-					Follow with me and I'll take you on my artistic journey
+					<div>
+						Follow with me and I'll take you on my artistic journey
+					</div>
+					<div>
+						跟著我,我會帶你前往我的設計旅程
+					</div>
+
 				</div>
-				<div>
-					跟著我,我會帶你前往我的設計旅程
-				</div>
-			</div>
+				<div style="position:fixed;right:16px;top:16px;font-weight:bold;">請使用電腦版瀏覽器瀏覽</div>
+
 			</div>
 		</transition>
 	</div>
@@ -77,7 +80,7 @@
 					</div>
 
 					<div id="mail" @click="personPage=true">
-						<img src="img/indexpage/1-1.png" style="height:100%"></img>
+						<img src="img/indexpage/1-1.png" style="height:100%;transform:scaleX(-1);"></img>
 						<div class="mail-animation">
 							!
 						</div>
@@ -109,6 +112,7 @@
 				<header @click="closePage">
 					<img src="img/indexpage/0-3-1.svg" style="height:80%"></img>
 					<img src="img/indexpage/0-3-2.svg" style="height:40%"></img>
+					<img class="backarrow" src="img/indexpage/backarrow.png" style="position:absolute;left: 32px; top: 96px;height:80%"></img>
 
 				</header>
 				<main>
@@ -163,6 +167,7 @@
 				<header @click="closePage">
 					<img src="img/indexpage/0-3-1.svg" style="height:80%"></img>
 					<img src="img/indexpage/0-3-2.svg" style="height:40%"></img>
+					<img class="backarrow" src="img/indexpage/backarrow.png" style="position:absolute;left: 32px; top: 96px;height:80%"></img>
 				</header>
 				<main>
 					<div class="project-list">
@@ -188,6 +193,7 @@
 				<header @click="closePage">
 					<img src="img/indexpage/0-3-1.svg" style="height:80%"></img>
 					<img src="img/indexpage/0-3-2.svg" style="height:40%"></img>
+					<img class="backarrow" src="img/indexpage/backarrow.png" style="position:absolute;left: 32px; top: 96px;height:80%"></img>
 				</header>
 				<main>
 					<div class="project-list">
@@ -213,6 +219,7 @@
 				<header @click="closePage">
 					<img src="img/indexpage/0-3-1.svg" style="height:80%"></img>
 					<img src="img/indexpage/0-3-2.svg" style="height:40%"></img>
+					<img class="backarrow" src="img/indexpage/backarrow.png" style="position:absolute;left: 32px; top: 96px;height:80%"></img>
 				</header>
 				<main>
 					<div class="project-list">
@@ -238,6 +245,7 @@
 				<header @click="closePage">
 					<img src="img/indexpage/0-3-1.svg" style="height:80%"></img>
 					<img src="img/indexpage/0-3-2.svg" style="height:40%"></img>
+					<img class="backarrow" src="img/indexpage/backarrow.png" style="position:absolute;left: 32px; top: 96px;height:80%"></img>
 				</header>
 				<main>
 					<div class="project-list">
