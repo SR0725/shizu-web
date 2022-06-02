@@ -577,7 +577,7 @@ projectVue['animationwork'] = new Vue({
                 text: `
                 <div>
                 使用MediBang Paint Pro繪製、GIFMaker製作gif<br>
-                第一次製作的短編動畫，只使用了四張圖片完成。
+                第一次製作的短篇動畫，只使用了四張圖片完成。
                 </div>
                 `
             },{
@@ -603,7 +603,7 @@ projectVue['animationwork'] = new Vue({
             },{
                 img: "img/animationwork/3.jpg",
                 anim: "img/animationwork/3.gif",
-                title: "Gif製作練習4-臉度動畫練習",
+                title: "Gif製作練習4-臉部動畫練習",
                 text: `
                 <div>
                 使用Krita繪製以及製作<br>
@@ -630,7 +630,7 @@ projectVue['animationwork'] = new Vue({
             text: `
             <div>
             使用MediBang Paint Pro繪製、GIFMaker製作gif<br>
-            第一次製作的短編動畫，只使用了四張圖片完成。
+            第一次製作的短篇動畫，只使用了四張圖片完成。
             </div>
             `
         }
